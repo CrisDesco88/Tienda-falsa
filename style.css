@@ -1,0 +1,138 @@
+:root {
+    --main-color: #232F3E;
+    --white-color: #fff;
+    --black-color: #000;
+    --orange-color: #F3A847;
+    --yellow-color: yellow;
+    --light-gray-color: #e0e0e0;
+    --medium-gray-color: #808080;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /*16px * 62.5 = 10px = 1rem*/ 
+}
+
+body {
+    height: 100vh;
+    font: 1.6rem Helvetica, Arial;
+    margin: 0;
+}
+
+a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--orange-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+}
+
+header a {
+    color: var(--white-color);
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+header a:hover {
+    color: var(--orange-color);
+}
+
+.brand a {
+    font-size: 3rem;
+}
+
+footer {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+}
+
+/* Products*/
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.products li {
+    flex: 0 1 30rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    height: 42rem;
+    border-top: 0.2rem var(--light-gray-color) solid;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product img {
+    max-height: 26rem;
+    max-width: 22rem;
+    margin-top: 2rem;
+}
+
+.product-name {
+    line-height: 2.2rem;
+}
+
+.product-brand {
+    font-size: 1.2rem;
+    color: var(--medium-gray-color);
+}
+
+.product-price {
+    font-size: 2rem;
+}
+
+/* Ratings */
+
+.rating {
+    color: var(--orange-color);
+    font-size: 1.8rem;
+}
+
+.rating span:last-child {
+    color: #a5a5a5;
+    font-size: 1.5rem;
+}
