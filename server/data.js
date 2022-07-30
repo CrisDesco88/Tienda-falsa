@@ -42,7 +42,7 @@ export const data = {
             brand: 'SoftCore',
             rating: 4.5,
             numReviews: 14,
-            countInStock: 15,
+            countInStock: 0,
         },
         {
             _id: '5',

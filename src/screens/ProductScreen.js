@@ -3,6 +3,14 @@ import { parseRequestUrl } from "../utils";
 import  Rating from "../components/Rating";
 
 const ProductScreen = {
+
+    after_render: () => {
+        const request = parseRequestUrl();
+        document.getElementById('add-button').addEventListener('click', () => {
+          document.location.hash = `/cart/${request.id}`;
+        })
+    },
+    
     render: async () => {
         const request = parseRequestUrl();
         const product = await getProduct(request.id);
@@ -34,8 +42,9 @@ const ProductScreen = {
                             Precio: <strong>$${product.price}</strong>
                         </li>
                         <li>
+                            Descripción:
                             <div>
-                                ${product.description}
+                                ${product.brand}
                             </div> 
                         </li>
                     </ul>
@@ -46,19 +55,20 @@ const ProductScreen = {
                             Precio: $${product.price}
                         </li>
                         <li>
-                            Status: 
+                            Stock: 
                             ${product.countInStock > 0 ? 
                                 `<span class="in-stock">Hay Stock</span>` : 
                                 `<span class="out-of-stock">Sin Stock</span>`
                             }
                         </li>
                         <li>
-                            <button id="add-button" class="primary">Agregar al carrito</button>
+                            <button id="add-button" class="fw primary">Agregar al carrito</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        
         `;
     },
 };
