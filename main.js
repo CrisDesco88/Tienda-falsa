@@ -4,7 +4,7 @@ import HomeScreen from "./src/screens/HomeScreen.js";
 import ProductScreen from "./src/screens/ProductScreen.js";
 import { hideLoading, parseRequestUrl, showLoading } from "./src/utils.js";
 import CartScreen from './src/screens/CartScreen.js';
-import SigninScreen from './src/screens/SignInScreen.js';
+import SigninScreen from './src/screens/SigninScreen.js';
 import Header from './src/components/Header.js';
 import RegisterScreen from './src/screens/RegisterScreen.js';
 import ProfileScreen from './src/screens/ProfileScreen.js';

@@ -1,5 +1,5 @@
 import { register } from '../api';
-import { getUserInfo, setUserInfo } from '../localStorage';
+import { setUserInfo } from '../localStorage';
 import { showLoading, hideLoading, showMessage} from '../utils';
 
 const RegisterScreen = {
@@ -19,14 +19,12 @@ const RegisterScreen = {
           showMessage(data.error);
         } else {
           setUserInfo(data);
-        //   redirectUser();
+        
         }
       });
   },
   render: () => {
-    // if (getUserInfo().name) {
-    //   redirectUser();
-    // }
+    
     return `
     <div class="form-container">
       <form id="register-form">
