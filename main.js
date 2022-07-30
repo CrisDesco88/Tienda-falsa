@@ -5,9 +5,9 @@ import ProductScreen from "./src/screens/ProductScreen.js";
 import { hideLoading, parseRequestUrl, showLoading } from "./src/utils.js";
 import CartScreen from './src/screens/CartScreen.js';
 import SigninScreen from './src/screens/SignInScreen.js';
-import Header from './src/components/Header';
-import RegisterScreen from './src/screens/RegisterScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
+import Header from './src/components/Header.js';
+import RegisterScreen from './src/screens/RegisterScreen.js';
+import ProfileScreen from './src/screens/ProfileScreen.js';
 
 const routes = {
     '/': HomeScreen,
