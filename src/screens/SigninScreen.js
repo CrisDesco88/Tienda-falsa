@@ -21,7 +21,7 @@ const SigninScreen = {
                 showMessage(data.error);
             }else{
                 setUserInfo(data);
-                document.location.hash = '/';	// redirect to home screen
+                document.location.hash = '/';// redirect to home screen
             }
         });
     },
